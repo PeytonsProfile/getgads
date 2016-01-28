@@ -1,3 +1,20 @@
 h1{ 
 background-color: orange;
+color:white;
 }
+
+p.center {
+    float: left;
+    margin: 1px;
+    padding: 1px;
+    width: 200px;
+    height: 10px;
+    
+} 
+
+h2{    
+    
+    color:white;
+    background-color: orange;
+}
+

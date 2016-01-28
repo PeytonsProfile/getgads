@@ -1,0 +1,141 @@
+<html>
+<!DOCTYPE html>
+
+<head>
+
+<meta charset="UTF-8">
+<style>
+#dialogoverlay{
+  display: none;
+  opacity: .8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #FFF;
+  width: 100%;
+  z-index: 10;
+}
+#dialogbox{
+  display: none;
+  position: fixed;
+  background: #000;
+  border-radius:7px; 
+  width:550px;
+  z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+</style>
+<script>
+function CustomAlert(){
+    this.render = function(dialog){
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH+"px";
+        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+        dialogbox.style.top = "100px";
+        dialogbox.style.display = "block";
+        document.getElementById('dialogboxhead').innerHTML = "Acknowledge This Message";
+        document.getElementById('dialogboxbody').innerHTML = dialog;
+        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">OK</button>';
+    }
+  this.ok = function(){
+    document.getElementById('dialogbox').style.display = "none";
+    document.getElementById('dialogoverlay').style.display = "none";
+  }
+}
+var Alert = new CustomAlert();
+</script>
+
+<script src="path/to/vanilla.js"></script>
+
+
+<script data-main="scripts/main" src="scripts/require.js"></script>
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
+
+</head>
+<body>
+  <h1>Browser Resources</h1>
+<h2>Live Walkthroughs, Tutorials and Challenges</h2>
+    <a href="http://lydna.com"><p id="1">Free Lynda Premium with select public library cards.</p></a>
+    <a href="http://www.livecoding.tv/"><p>Live Coding</p></a>
+<a href="http://codeschool.com"><p>Code School</p></a>
+<a href="http://khanacademy.com"><p>Khan Academy</p></a>
+<a href="http://teamtreehouse.com"><p>Treehouse</p></a>
+<a href="http://codecademy.com"><p>Code Cademy</p></a>
+<a href="http://codequizzes.com"><p>Code Quizzes</p></a>
+<a href="http://w3schools.com/sql"><p>W3 Schools</p></a>
+<a href="http://sqlbolt.com"><p>SQL Bolt</p></a>
+<a href="https://codewars.com"><p>Code Wars</p></a>
+<a href="http://www.theodinproject.com/javascript-and-jquery"><p>The Odin Project</p></a>
+<a href="http://apidock.com"><p>API Dock</p></a>
+<a href="http://www.tutorialspoint.com/"><p>Tutorials Point</p></a>
+<a href="http://rspec.info"><p>Ruby Spec</p></a>
+<a href="http://amberonrails.com"><p>Amber on Rails</p></a>
+<a href="http://plnkr.co"><p>Plunker</p></a>
+<a href="https://www.developphp.com/video/JavaScript/Custom-Alert-Box-Programming-Tutorial"><p>Develop PHP</p></a>
+<br>
+
+
+<h2>Code Sandboxes</h2>
+
+<a href="http://shoelace.io/"><p>Shoe Lace</p></a> 
+<a href="https://jsfiddle.net/"><p>JS Fiddle</p></a>
+<a href="http://jsbin.com/"><p>JS bin</p></a>
+<a href="http://www.jslint.com/"><p>JS Link</p></a>
+<a href="http://codepen.io/"><p>Code Pen</p></a>
+
+<h2>Typing</h2>
+<a href="http://typing.io"><p>Programmer Typing</p></a>
+
+<h2>Developer Environment Setup</h2>
+<a href="http://www.cultofmac.com/"><p>Cult of Mac</p></a>
+<a href="http://lifehacker.com"><p>Life Hacker</p></a>
+
+<h2>Code Documents</h2>
+<a href="http://matchers.shoulda.io/docs/v2.8.0/"><p>Shoulda Matchers</p></a>
+<a href="http://ruby-doc.org"><p>Ruby Documents</p></a>
+<a href="http://www.bootstrapcdn.com/"><p>Bootstrap CDN</p></a>  
+<a href="https://developer.mozilla.org/en-US/"><p>Mozilla Developer</p></a>    
+<a href="http://javascript.com"><p>Javascript</p></a>
+<a href="https://github.com/rspec/rspec-expectations"><p>Rspec Git Hub</p></a>
+<a href="http://github.com"><p>Git Hub</p></a>
+<a href="http://stackoverflow.com"><p>Stack Overflow</p></a>
+<a href="http://stackexchange.com"><p>Stack Exchange</p></a>
+<a href="http://esprima.org"><p>ES Prima</p></a>
+
+<h2>Code Management</h2>
+<a href="http://github.com"><p>Git Hub</p></a>
+
+<h2>Database Management</h2>
+<a href="http://sqlbolt.com"><p>SQL Bolt</p></a>
+<a href="http://campus.codschool.com/courses/try-sql"><p>SQL Code School</p></a>
+
+<h2>Misc</h2>
+<a href="http://sorting-algorithms.com"><p>Sorting Algorithms</p></a>
+
+
+<div id="dialogoverlay"></div>
+<div id="dialogbox">
+  <div>
+    <div id="dialogboxhead"></div>
+    <div id="dialogboxbody"></div>
+    <div id="dialogboxfoot"></div>
+  </div>
+</div>
+<h1>My web document content ...</h1>
+<h2>My web document content ...</h2>
+
+<button onclick="Alert.render('And you also smell very nice.')">Custom Alert 2</button>
+
+</body>
+<footer>
+
+</footer>
+</html>
