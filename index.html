@@ -1,4 +1,34 @@
-<HTML><HEAD>
+<HTML>
+<!DOCTYPE html>
+
+    <HEAD>
+
+<style>
+#dialogoverlay{
+  display: none;
+  opacity: .8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #FFF;
+  width: 100%;
+  z-index: 10;
+}
+#dialogbox{
+  display: none;
+  position: fixed;
+  background: #000;
+  border-radius:7px; 
+  width:550px;
+  z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+</style>
+
+        
 <script>
 function CustomAlert(){
     this.render = function(dialog){
@@ -25,8 +55,13 @@ function CustomAlert(){
 var Alert = new CustomAlert();
 </script>
 
+<script data-main="scripts/main" src="scripts/require.js"></script>
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
+
 <script src="path/to/vanilla.js"></script>
 </HEAD><BODY>
+
 <div id="dialogoverlay"></div>
 <div id="dialogbox">
   <div>
@@ -35,7 +70,6 @@ var Alert = new CustomAlert();
     <div id="dialogboxfoot"></div>
   </div>
 </div>
-
 
 <button onclick="Alert.render()">BROWSER ARM</button>
 
