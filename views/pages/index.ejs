@@ -1,17 +1,19 @@
-<HTML>
+<html>
 <!DOCTYPE html>
 
-    <HEAD>
+<head>
 
+<meta charset="UTF-8">
 <style>
 #dialogoverlay{
   display: none;
-  opacity: .8;
+  opacity: .1;
   position: fixed;
-  top: 0px;
-  left: 0px;
-  background: #FFF;
-  width: 100%;
+  top: 1px;
+  left: 1px;
+  background-repeat:  #333;
+
+  width: 72%;
   z-index: 10;
 }
 #dialogbox{
@@ -27,8 +29,6 @@
 #dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
 #dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
 </style>
-
-        
 <script>
 function CustomAlert(){
     this.render = function(dialog){
@@ -45,9 +45,7 @@ function CustomAlert(){
         document.getElementById('dialogboxbody').innerHTML = "Friends";
         document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">ARM</button>';
     }
-
-  
-    this.ok = function(){
+  this.ok = function(){
     document.getElementById('dialogbox').style.display = "none";
     document.getElementById('dialogoverlay').style.display = "none";
   }
@@ -55,12 +53,16 @@ function CustomAlert(){
 var Alert = new CustomAlert();
 </script>
 
+<script src="path/to/vanilla.js"></script>
+
+
 <script data-main="scripts/main" src="scripts/require.js"></script>
 <script type='text/javascript' src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
 <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
 
-<script src="path/to/vanilla.js"></script>
-</HEAD><BODY>
+</head>
+<body>
+
 
 <div id="dialogoverlay"></div>
 <div id="dialogbox">
@@ -71,11 +73,78 @@ var Alert = new CustomAlert();
   </div>
 </div>
 
+
 <button onclick="Alert.render()">BROWSER ARM</button>
 
+  <h1>Browser Resources</h1>
+<h2 id="">Live Walkthroughs, Tutorials and Challenges</h2>
+    <a href="http://lynda.com"><p id="lynda">Free Lynda Premium with select public library cards.</p></a>
+    <a href="http://www.livecoding.tv/"><p id="liveCoding">Live Coding</p></a>
+<a href="http://codeschool.com"><p id="codeSchool">Code School</p></a>
+<a href="http://khanacademy.com"><p id="khanAcademy">Khan Academy</p></a>
+<a href="http://teamtreehouse.com/peytoncaseria"><p id="teamTreeHouse">Treehouse</p></a>
+<a href="http://codecademy.com"><p id="codeCademy">Code Cademy</p></a>
+<a href="http://codequizzes.com"><p id="codeQuizzes">Code Quizzes</p></a>
+<a href="http://w3schools.com"><pid ="w3Schools">W3 Schools</p></a>
+<a href="http://sqlbolt.com"><p id="sqlBolt">SQL Bolt</p></a>
+<a href="https://codewars.com"><p id="codeWars">Code Wars</p></a>
+<a href="http://www.theodinproject.com/javascript-and-jquery"><p id="theOdinProject">The Odin Project</p></a>
+<a href="http://apidock.com"><p id="apiDocks">API Dock</p></a>
+<a href="http://www.tutorialspoint.com/"><p id="tutorialsPoint">Tutorials Point</p></a>
+<a href="http://rspec.info"><p id="rubySpecs">Ruby Spec</p></a>
+<a href="http://amberonrails.com"><p id="amberOnRails">Amber on Rails</p></a>
+<a href="http://plnkr.co"><p id="plunker">Plunker</p></a>
+<a href="https://www.developphp.com/video/JavaScript/Custom-Alert-Box-Programming-Tutorial"><p id="developPHP">Develop PHP</p></a>
+<br>
 
 
-</BODY>
-<FOOTER>
-</FOOTER>
-</HTML>
+<h2 id="codeSandboxes">Code Sandboxes</h2>
+
+<h3 href="http://shoelace.io/"><p id="shoeLace">Shoe Lace</p></a> 
+<a href="https://jsfiddle.net/"><p id="jsFiddle">JS Fiddle</p></a>
+<a href="http://jsbin.com/"><p id="jsBin">JS bin</p></a>
+<a href="http://www.jslint.com/"><p id="jsLint">JS Link</p></a>
+<a href="http://codepen.io/"><p id="codePen">Code Pen</p></a>
+
+<h2 id="typing">Typing</h2>
+<a href="http://typing.io"><p id="programmerTyping">Programmer Typing</p></a>
+
+<h2 id="developerEnvironment">Developer Environment Setup</h2>
+<a href="http://www.cultofmac.com/"><p id="cultOfMac">Cult of Mac</p></a>
+<a href="http://lifehacker.com"><p id="lifeHacker">Life Hacker</p></a>
+
+<h2 id="codeDocuments">Code Documents</h2>
+<a href="http://matchers.shoulda.io/docs/v2.8.0/"><p id="shouldaMatchers">Shoulda Matchers</p></a>
+<a href="http://ruby-doc.org"><p id="rubyDocuments">Ruby Documents</p></a>
+<a href="http://www.bootstrapcdn.com/"><p id="bootstrapCDN">Bootstrap CDN</p></a>  
+<a href="https://developer.mozilla.org/en-US/"><p id="mozillaDeveloper">Mozilla Developer</p></a>    
+<a href="http://javascript.com"><p id="javascript">Javascript</p></a>
+<a href="https://github.com/rspec/rspec-expectations"><p id="rspecGithub">Rspec Git Hub</p></a>
+<a href="http://github.com"><p id="github">Git Hub</p></a>
+<a href="http://stackoverflow.com"><p id="stackOverflow">Stack Overflow</p></a>
+<a href="http://stackexchange.com"><p id="stackExchange">Stack Exchange</p></a>
+<a href="http://esprima.org"><p id="esPrima">ES Prima</p></a>
+
+<h2 id="codeManagement">Code Management</h2>
+<a href="http://github.com"><p id="githubManagement">Git Hub</p></a>
+
+<h2 id="databaseManagement">Database Management</h2>
+<a href="http://sqlbolt.com"><p id="sqlBolt">SQL Bolt</p></a>
+<a href="http://campus.codschool.com/courses/try-sql"><p id="sqlCodeSchool">SQL Code School</p></a>
+
+<h2 id="mobile">Mobile</h2>
+
+<h2 id="misc">Misc</h2>
+<a href="http://sorting-algorithms.com"><p id="sortingAlgorithms">Sorting Algorithms</p></a>
+
+
+
+
+
+
+
+</body>
+<footer>
+
+</footer>
+</html>
