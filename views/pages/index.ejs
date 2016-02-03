@@ -99,14 +99,29 @@ var Alert = new CustomAlert();
 
 <script>
 
-function myFunction() 
-  {
-  var x=document.getElementById("liveWalkthroughs");
-  alert(x.innerHTML);
+function myFunction() {
+  this.render = function(dialog)
+      var winW = window.innerWidth;
+      var winH = window.innerHeight;
+      var dialogoverlay = document.getElementById("dialogoverlay");
+      var dialogbox = document.getElementById('dialogbox');
+      dialogoverlay.style.display = "block";
+      dialogbox.style.height = winH+"px";
+      dialogbox.style.right = (winW/2) - (550 * .5)+"px";
+      dialogbox.style.top = "50px";
+      dialogbox.style.display = "block";
+      document.getElementById("dialogboxhead").innerHTML = "Walkthroughs";
+     document.getElementById("dialogboxbody").innerHTML = "Live";
+     document.getElementById("dialogboxfoot").innerHTML = '<button onclick="Live.ok()">ARM</button>';
   }
-
+  this.ok = function(){ 
+    document.getElementById('dialogbox').style.display = "none";
+    document.getElementById('dialogoverlay').style.display = "none";
+  }
+}
+var Live = new myFunction();
 </script>
-
+  
 </head>
 <body>
 
@@ -126,7 +141,17 @@ function myFunction()
 
   <h1>Browser Resources</h1>
 <h2 id="liveWalkthroughs" onclick="getValue()">Live Walkthroughs, Tutorials and Challenges</h2>
-    
+    <div id="dialogoverlay"></div>
+<div id="dialogbox">
+  <div>
+    <div id="dialogboxhead"></div>
+    <div id="dialogboxbody"></div>
+    <div id="dialogboxfoot"></div>
+  </div>
+</div>
+
+
+<button onclick="live.render()">BROWSER ARM</button>
 
     <div class="collection">
     <a href="http://lynda.com" class="collection-item"><p id="lynda">Free Lynda Premium with select public library cards.</p></a>
