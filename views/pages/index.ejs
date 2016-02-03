@@ -96,6 +96,17 @@ var Alert = new CustomAlert();
 
 
 
+
+<script>
+
+function myFunction() 
+  {
+  var x=document.getElementById("liveWalkthroughs");
+  alert(x.innerHTML);
+  }
+
+</script>
+
 </head>
 <body>
 
@@ -114,7 +125,7 @@ var Alert = new CustomAlert();
 <button onclick="Alert.render()">BROWSER ARM</button>
 
   <h1>Browser Resources</h1>
-<h2 id="">Live Walkthroughs, Tutorials and Challenges</h2>
+<h2 id="liveWalkthroughs" onclick="getValue()">Live Walkthroughs, Tutorials and Challenges</h2>
     
 
     <div class="collection">
