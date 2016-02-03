@@ -50,8 +50,7 @@
   top: 1px;
   left: 1px;
   background-repeat:  #333;
-  height: 300px;
-  height: 30%;
+  
   width: 30%;
   z-index: 10;
 }
@@ -63,13 +62,12 @@
   width:380px;
   z-index: 10;
   width: 30%;
-  height:300px;
-  height: 30%;
+  
 }
 #dialogbox > div{ background:#FFF; margin:8px; }
-#dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
-#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
-#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+#dialogbox > div > #dialogboxhead{ background: #666; font-size:8px; padding:10px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background:#333; padding:5px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:5px; text-align:right; }
 </style>
 <script>
 function CustomAlert(){
@@ -80,7 +78,7 @@ function CustomAlert(){
         var dialogbox = document.getElementById('dialogbox');
         dialogoverlay.style.display = "block";
         dialogoverlay.style.height = winH+"px";
-        dialogbox.style.left = (winW/3) - (550 * .5)+"px";
+        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
         dialogbox.style.top = "100px";
         dialogbox.style.display = "block";
         document.getElementById('dialogboxhead').innerHTML = "Welcome to ∞∞Gads∞∞ toolbox! here you can get ∞Gads∞ Gadgetry. This is the browsers toolbox, itll transmorph as new gadgets cross over to new platforms, and etc.∞Gads∞ superpower is that he is his own infinite sized toolbox by utilizing compression algorithms! leave a tool suggestion in his Gmail box.Beta: Submit ∞Gads∞ fanart, he wants us to depict ∞Gads∞ because he is virtual and has no arms!.";
